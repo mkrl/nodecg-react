@@ -1,0 +1,60 @@
+{
+  "name": "nodecg-react",
+  "version": "0.1.0",
+  "description": "A boilerplate bundle to get started with NodeCG, React and Flux.",
+  "homepage": "",
+  "author": {
+    "name": "mkrl",
+    "email": "self@mkrl.xyz",
+    "url": "https://mkrl.xyz"
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "src",
+    "extension"
+  ],
+  "keywords": [
+    "react",
+    "flux",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "Panel",
+        "width": 2,
+        "file": "panel.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": true
+      }
+    ]
+  },
+  "repository": "git@github.com:nodecg/nodecg.git",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "events": "^3.0.0",
+    "flux": "^3.1.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "scripts": {
+    "start": "parcel watch src/index.html -d graphics --public-url ./"
+  }
+}
