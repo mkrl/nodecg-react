@@ -10,15 +10,30 @@
 </head>
 <body>
 	<p>
-		Hello, I'm one of the panels in your bundle!
-		I'm where you put your controls.
+		Hello, I'm a default panel that comes with a nodecg-react bundle!
 	</p>
-
-	<button>Fart</button>
-
+	<p>
+		You can play with me and directly update your stateful React graphics from here.
+	</p>
+	<p>
+		<button id="stamp">Timestamp!</button>
+	</p>
+	<p>
+		<label for="name">Craftsman name</label>
+		<input id="name" type="text" value="John Doe"/>
+		<button id="nameButton">Set name</button>
+	</p>
 	<script>
-		
-		// nodecg.log.info('Here\'s an example of using NodeCG\'s logging API!');
+		const timeButton = document.querySelector("#stamp")
+		const nameButton = document.querySelector("#nameButton")
+		const nameInput = document.querySelector("#name")
+
+
+		const timeReplicant = nodecg.Replicant('timestamp')
+		const nameReplicant = nodecg.Replicant('name')
+
+		timeButton.onclick = () => timeReplicant.value = Date.now()
+		nameButton.onclick = () => nameReplicant.value = nameInput.value
 	</script>
 </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "nodecg-react",
   "version": "0.1.0",
   "description": "A boilerplate bundle to get started with NodeCG, React and Flux.",
-  "homepage": "",
+  "homepage": "https://github.com/mkrl/nodecg-react",
   "author": {
     "name": "mkrl",
     "email": "self@mkrl.xyz",
@@ -25,7 +25,7 @@
     "dashboardPanels": [
       {
         "name": "panel",
-        "title": "Panel",
+        "title": "NodeCG React",
         "width": 2,
         "file": "panel.html",
         "headerColor": "#525F78"
@@ -40,7 +40,7 @@
       }
     ]
   },
-  "repository": "git@github.com:nodecg/nodecg.git",
+  "repository": "git@github.com:mkrl/nodecg-react.git",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -55,6 +55,7 @@
     "react-dom": "^16.8.6"
   },
   "scripts": {
-    "start": "parcel watch src/index.html -d graphics --public-url ./"
+    "start": "parcel watch src/index.html -d graphics --public-url ./",
+    "build": "parcel build src/index.html -d graphics --public-url ./"
   }
 }
